@@ -1,0 +1,26 @@
+<div>
+  <span style="width:20em;line-height: 20em" class="flag-icon flag-icon-{{this.fs.k|lowercase}}"></span>
+</div>
+
+
+<div *ngFor="let day of this.fs.countriesarr.Isocode;let i = index">
+    <!-- <div *ngFor="let da of this.countriesarr.name"> -->
+  <!-- create a radio button-->
+  <input
+  type="radio"
+  name="dayOfTheWeek"
+  value="{{day}}"
+  (change)="radioChangeHandler($event)">
+  <i>{{this.fs.countriesarr.name[i]}}  ({{day}})</i>
+  <!-- <i>{{da}}{{day}}</i> -->
+  </div>
+<!-- </div> -->
+
+<!-- the radio button change will be reflected below -->
+<!-- <p><span>You selected: </span><b>{{selectedDay}}</b></p> -->
+
+
+
+
+<button type="button" class="btn btn-default" routerLink="/next" routerLinkActive="active" >Submit</button>
+<!-- <button  type="button" class="btn btn-default" routerLink="/register" (click)="next()">Next</button> -->

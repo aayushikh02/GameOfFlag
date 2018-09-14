@@ -1,0 +1,10 @@
+ <div *ngIf="this.fs.r==1">
+  <p>Correct Answer</p>
+  <p>Score: {{this.fs.score}}</p>
+  </div>
+  <div *ngIf="this.fs.r==0">
+   <p> Wrong Answer</p>
+    <p>Score: {{this.fs.score}}</p>
+  </div>
+
+    <button  type="button" class="btn btn-default" routerLink="/first">Next</button>
